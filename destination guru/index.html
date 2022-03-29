@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="templatemo">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.8">
+
+<!--    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>-->
+<!--    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>-->
+<title>Destination Guru</title>
+<!--
+Stimulus Template
+http://www.templatemo.com/tm-498-stimulus
+-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/templatemo-style.css">
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+    
+<style>
+    
+    .sub-header {
+  background-color: #1f272b;
+  position: relative;
+  z-index: 1111;
+}
+
+.sub-header .left-content p {
+  color: #77BDC9;
+  padding: 8px 0px;
+  font-size: 13px;
+}
+
+.sub-header .right-icons {
+  text-align: right;
+  padding: 8px 0px;
+}
+
+.sub-header .right-icons ul li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.sub-header .right-icons ul li a {
+  color: #77BDC9;
+  font-size: 14px;
+  transition: all .3s;
+}
+
+.sub-header .right-icons ul li a:hover {
+  color: #77BDC9;
+}
+
+.sub-header .left-content p em {
+   font-style: normal;
+   color: #77BDC9;
+}
+
+.background-header {
+  background-color: #77BDC9!important;
+  height: 10px!important;
+  position: fixed!important;
+  top: 0!important;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
+}
+
+.background-header .main-nav .nav li a {
+  color: #ffffff!important;
+}
+
+.background-header .logo,
+.background-header .main-nav .nav li a {
+  color: #ffffff!important;
+}
+
+.background-header .main-nav .nav li:hover a {
+  color: #ffffff!important;
+}
+
+.background-header .nav li a.active {
+  color: #ffffff!important;
+}
+
+.header-area {
+/*  background-color: rgba(250,250,250,0.15);*/
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  -webkit-transition: all .5s ease 0s;
+  -moz-transition: all .5s ease 0s;
+  -o-transition: all .5s ease 0s;
+  transition: all .5s ease 0s;
+}
+
+.header-area .main-nav {
+  min-height: 20px;
+  background: transparent;
+}
+
+.header-area .main-nav .logo {
+  line-height: 100px;
+  color: #77BDC9;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  float: left;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.background-header .main-nav .logo {
+  line-height: 75px;
+}
+
+.background-header .nav {
+  margin-top: 20px !important;
+}
+
+.header-area .main-nav .nav {
+  float: right;
+  margin-top: 30px;
+  margin-right: 0px;
+  background-color: transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  position: relative;
+  z-index: 999;
+}
+
+.header-area .main-nav .nav li {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header-area .main-nav .nav li:last-child {
+  padding-right: 0px;
+}
+
+.header-area .main-nav .nav li a {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #77BDC9;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  height: 10px;
+  line-height: 40px;
+  border: transparent;
+  letter-spacing: 1px;
+}
+
+.header-area .main-nav .nav li:hover a,
+.header-area .main-nav .nav li a.active {
+  color: #77BDC9!important;
+}
+
+.background-header .main-nav .nav li:hover a,
+.background-header .main-nav .nav li a.active {
+  color: #fff!important;
+  opacity: 1;
+}
+
+.header-area .main-nav .nav li.has-sub {
+  position: relative;
+  padding-right: 15px;
+}
+
+.header-area .main-nav .nav li.has-sub:after {
+  font-family: FontAwesome;
+  content: "\f107";
+  font-size: 12px;
+  color: #fff;
+  position: absolute;
+  right: 5px;
+  top: 12px;
+}
+
+/*
+.background-header .main-nav .nav li.has-sub:after {
+  color: #1e1e1e;
+}
+*/
+
+.header-area .main-nav .nav li.has-sub ul.sub-menu {
+  position: absolute;
+  width: 200px;
+  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  top: 40px;
+  opacity: 0;
+  transition: all .3s;
+  transform: translateY(+2em);
+  visibility: hidden;
+  z-index: -1;
+}
+
+.header-area .main-nav .nav li.has-sub ul.sub-menu li {
+  margin-left: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.header-area .main-nav .nav li.has-sub ul.sub-menu li a {
+  opacity: 1;
+  display: block;
+  background: #77BDC9;
+  color: white!important;
+  padding-left: 20px;
+/*  height: 40px;*/
+  line-height: 40px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  position: relative;
+  font-size: 13px;
+  font-weight: 400;
+  border-bottom: 1px solid #eee;
+}
+
+.header-area .main-nav .nav li.has-sub ul li a:hover {
+  background: #fff;
+  color: #77BDC9!important;
+  padding-left: 25px;
+}
+
+.header-area .main-nav .nav li.has-sub ul li a:hover:before {
+  width: 3px;
+}
+
+.header-area .main-nav .nav li.has-sub:hover ul.sub-menu {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s;
+}
+
+.header-area .main-nav .menu-trigger {
+  cursor: pointer;
+/*  display: block;*/
+  position: absolute;
+  top: 33px;
+  width: 32px;
+  height: 40px;
+  text-indent: -9999em;
+  z-index: 99;
+  right: 40px;
+  display: none;
+}
+
+.background-header .main-nav .menu-trigger {
+  top: 23px;
+}
+
+.header-area .main-nav .menu-trigger span,
+.header-area .main-nav .menu-trigger span:before,
+.header-area .main-nav .menu-trigger span:after {
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background-color: #1e1e1e;
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  left: 0;
+}
+
+.background-header .main-nav .menu-trigger span,
+.background-header .main-nav .menu-trigger span:before,
+.background-header .main-nav .menu-trigger span:after {
+  background-color: #1e1e1e;
+}
+
+.header-area .main-nav .menu-trigger span:before,
+.header-area .main-nav .menu-trigger span:after {
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background-color: #1e1e1e;
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  left: 0;
+  width: 75%;
+}
+
+.background-header .main-nav .menu-trigger span:before,
+.background-header .main-nav .menu-trigger span:after {
+  background-color: #1e1e1e;
+}
+
+.header-area .main-nav .menu-trigger span:before,
+.header-area .main-nav .menu-trigger span:after {
+  content: "";
+}
+
+.header-area .main-nav .menu-trigger span {
+  top: 16px;
+}
+
+.header-area .main-nav .menu-trigger span:before {
+  -moz-transform-origin: 33% 100%;
+  -ms-transform-origin: 33% 100%;
+  -webkit-transform-origin: 33% 100%;
+  transform-origin: 33% 100%;
+  top: -10px;
+  z-index: 10;
+}
+
+.header-area .main-nav .menu-trigger span:after {
+  -moz-transform-origin: 33% 0;
+  -ms-transform-origin: 33% 0;
+  -webkit-transform-origin: 33% 0;
+  transform-origin: 33% 0;
+  top: 10px;
+}
+
+.header-area .main-nav .menu-trigger.active span,
+.header-area .main-nav .menu-trigger.active span:before,
+.header-area .main-nav .menu-trigger.active span:after {
+  background-color: transparent;
+  width: 100%;
+}
+
+.header-area .main-nav .menu-trigger.active span:before {
+  -moz-transform: translateY(6px) translateX(1px) rotate(45deg);
+  -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
+  -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
+  transform: translateY(6px) translateX(1px) rotate(45deg);
+  background-color: #1e1e1e;
+}
+
+.background-header .main-nav .menu-trigger.active span:before {
+  background-color: #1e1e1e;
+}
+
+.header-area .main-nav .menu-trigger.active span:after {
+  -moz-transform: translateY(-6px) translateX(1px) rotate(-45deg);
+  -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
+  -webkit-transform: translateY(-6px) translateX(1px) rotate(-45deg);
+  transform: translateY(-6px) translateX(1px) rotate(-45deg);
+  background-color: #1e1e1e;
+}
+
+.background-header .main-nav .menu-trigger.active span:after {
+  background-color: #1e1e1e;
+}
+
+.header-area.header-sticky {
+  min-height: 80px;
+}
+
+.header-area .nav {
+  margin-top: 30px;
+}
+
+.header-area.header-sticky .nav li a.active {
+  color: #77BDC9;
+}
+
+@media (max-width: 1200px) {
+  .header-area .main-nav .nav li {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+  .header-area .main-nav:before {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-area .main-nav .logo {
+    color: #77BDC9;
+  }
+  .header-area.header-sticky .nav li a:hover,
+  .header-area.header-sticky .nav li a.active {
+    color: #77BDC9!important;
+    opacity: 1;
+  }
+  .header-area.header-sticky .nav li.search-icon a {
+    width: 100%;
+     
+  }
+  .header-area {
+/*    background-color: #CE9A89;*/
+    padding: 0px 15px;
+    height: 100px;
+    box-shadow: none;
+    text-align: center;
+  }
+  .header-area .container {
+    padding: 0px;
+  }
+  .header-area .logo {
+    margin-left: 30px;
+  }
+  .header-area .menu-trigger {
+    display: block !important;
+  }
+  .header-area .main-nav {
+    overflow: hidden;
+  }
+  .header-area .main-nav .nav {
+    float: none;
+    width: 100%;
+    display: none;
+    -webkit-transition: all 0s ease 0s;
+    -moz-transition: all 0s ease 0s;
+    -o-transition: all 0s ease 0s;
+    transition: all 0s ease 0s;
+    margin-left: 0px;
+  }
+  .header-area .main-nav .nav li:first-child {
+    border-top: 1px solid #eee;
+  }
+  .header-area.header-sticky .nav {
+    margin-top: 100px !important;
+  }
+  .header-area .main-nav .nav li {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .header-area .main-nav .nav li a {
+    height: 50px !important;
+    line-height: 50px !important;
+    padding: 0px !important;
+    border: none !important;
+    background: #f7f7f7 !important;
+    color: #191a20 !important;
+  }
+  .header-area .main-nav .nav li a:hover {
+    background: #eee !important;
+    color: #77BDC9!important;
+  }
+  .header-area .main-nav .nav li.has-sub ul.sub-menu {
+    position: relative;
+    visibility: inherit;
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0%);
+    top: 0px;
+    width: 100%;
+    box-shadow: none;
+    height: 0px;
+    transition: all 0s;
+  }
+  .header-area .main-nav .nav li.submenu ul li a {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .header-area .main-nav .nav li.submenu ul li a:hover:before {
+    width: 0px;
+  }
+  .header-area .main-nav .nav li.has-sub ul.sub-menu {
+    height: auto;
+  }
+  .header-area .main-nav .nav li.has-sub:after {
+    color: #3B566E;
+    right: 30px;
+    font-size: 14px;
+    top: 15px;
+  }
+  .header-area .main-nav .nav li.submenu:hover ul, .header-area .main-nav .nav li.submenu:focus ul {
+    height: 0px;
+  }
+}
+
+@media (min-width: 767px) {
+  .header-area .main-nav .nav {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .sub-header .left-content p {
+    display: none;
+  }
+
+  .sub-header .right-icons {
+    text-align: center;
+  }
+
+  .main-nav .nav .sub-menu {
+    display: none;
+  }
+
+  .header-area .main-nav .nav li ul.sub-menu li a {
+    color: #1f272b;
+  }
+
+}
+    
+/*    WHATSAPP*/
+    
+    .social-link {
+    background-color: #77BDC9;
+    position:fixed;
+    z-index: 999;
+    top: 80%!important;
+    right: 35px;
+    border-radius: 400px;
+        height: 65px;
+        width: 65px;
+}
+    .social-link .ul{
+        list-style-type: none;
+    }
+   
+    @media screen and (max-width: 768px)
+.social-link .ul{
+    position: fixed;
+    top: 80%!important;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    .btn-whats{
+/*  background-color: #25D366;*/
+  color: white;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  border-radius: 800px;
+  padding: 20px;
+  top: 85%;
+  left: 90%;
+  position: fixed;
+  transition: all .6s;
+  animation: 2s btn-whats;
+  animation-fill-mode: both;
+  animation-iterative-count: 1;
+  z-index: 1;
+}.btn-whats:hover{
+  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+}
+
+.pulse{
+  animation: pulse 2s infinite;
+}
+
+
+
+.btn-whats > i{
+  position: relative;
+  font-size: 2.4rem;
+  margin: -5px -1px;
+}
+
+@media only screen and (min-width: 900px){
+  .btn-whats{
+    left: 92%;
+  }
+  
+
+}
+
+@media only screen and (max-width: 700px){
+  .btn-whats{
+    left: 85%;
+  }
+  h1{
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 450px){
+  .btn-whats{
+    left: 80%;
+  }
+  
+}
+
+@media only screen and (max-width: 350px){
+  .btn-whats{
+    left: 75%;
+  }
+}
+/* Animações */
+@keyframes btn-whats{
+  10%{
+    transform: translate(0, 200px); 
+  }
+  50%{
+    transform: translate(0, -40px);
+  }
+  
+  70%{
+    transform: scale(1.1);
+  }
+}
+
+@keyframes pulse {
+  50%{
+    transform: scale(1.1);
+  }
+}
+    
+    
+    
+    
+    
+/*    Banner */
+    .masthead {
+  position: relative;
+/*  margin-bottom: 3rem;*/
+  padding-top: calc(8rem + 57px);
+/*        padding-top:50px;*/
+  padding-bottom: 8rem;
+  background: no-repeat center center;
+  background-color: #6c757d;
+  background-size: cover;
+  background-attachment: scroll;
+        height: 390px;
+}
+.masthead:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #77BDC9;
+  opacity: 0.5;
+    padding-bottom: 80px;
+}
+.masthead .page-heading,
+.masthead .post-heading,
+.masthead .site-heading {
+  color: #fff;
+}
+.masthead .page-heading,
+.masthead .site-heading {
+  text-align: center;
+}
+.masthead .page-heading h1, .masthead .page-heading .h1,
+.masthead .site-heading h1,
+.masthead .site-heading .h1 {
+  font-size: 3rem;
+}
+.masthead .page-heading .subheading,
+.masthead .site-heading .subheading {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.1;
+  display: block;
+  margin-top: 0.625rem;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.masthead .post-heading h1, .masthead .post-heading .h1 {
+  font-size: 2.25rem;
+}
+.masthead .post-heading .meta,
+.masthead .post-heading .subheading {
+  line-height: 1.1;
+  display: block;
+}
+.masthead .post-heading .subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.75rem 0 2rem;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.masthead .post-heading .meta {
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+  font-family: "Lora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.masthead .post-heading .meta a {
+  color: #fff;
+}
+@media (min-width: 992px) {
+  .masthead {
+    padding-top: 12.5rem;
+    padding-bottom: 12.5rem;
+  }
+  .masthead .page-heading h1, .masthead .page-heading .h1,
+header.masthead .site-heading h1,
+header.masthead .site-heading .h1 {
+    font-size: 5rem;
+  }
+  .masthead .post-heading h1, .masthead .post-heading .h1 {
+    font-size: 3.5rem;
+  }
+  .masthead .post-heading .subheading {
+    font-size: 1.875rem;
+  }
+}
+
+.section-heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-top: 3.75rem;
+}
+    
+    
+    
+   .blink-one {
+        animation: blinker-one 1s linear infinite;
+      }
+      @keyframes blinker-one {
+        0% {
+          opacity: 0;
+        }
+      }
+/*
+ ABOUT US
+    #about-us {
+    padding: 70px 0;
+  }
+  #about-us .block p {
+    padding: 40px 0px 0px;
+  }
+*/
+    #about-us {
+  padding: 10px 0px;
+  background: #F6F6F6;
+}
+#about-us .block {
+  text-align: center;
+}
+#about-us .block p {
+  color: #959595;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 10px 0px;
+}
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+
+<!-- PRE LOADER -->
+
+<!--
+<div class="preloader">
+     <div class="spinner">
+          <span class="spinner-rotate"></span>
+     </div>
+</div>
+-->
+
+<!--Header -->
+
+<header class="header-area header-sticky">
+      <div class="container" >
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="index.html" class="logo" style="font-family:'Segoe print', monospace; font-size:14px;">
+                          Destination
+                          Guru&nbsp;<i class="fa fa-plane" aria-hidden="true" style="font-size:24px;"></i>
+                      </a>
+                     
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                          <li class="scroll-to-section"><a href="#top" class="active" style="color:#77BDC9;">Home</a></li>
+                          <li><a href="#about-us">About Us</a></li>
+                          <li class="scroll-to-section"><a href="#apply">Services</a></li>
+                          <li class="has-sub">
+<!--                              <a href="javascript:void(0)">Visa Preparation</a>-->
+<!--
+                              <ul class="sub-menu">
+                                  <li><a href="meetings.html">Upcoming Meetings</a></li>
+                                  <li><a href="meeting-details.html">Meeting Details</a></li>
+                              </ul>
+-->
+                          </li>
+                          <li class="scroll-to-section"><a href="#courses">Courses</a></li> 
+                          <li class="scroll-to-section"><a href="#contact">Contact Us</a></li> 
+                      </ul>        
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+    <br>
+    <br><br><br>
+    <section>
+      <div class="masthead" style="background-image: url('images/banner1.jpg')" style="">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading" style="color:white;">
+                            <h1><b>Welcome To</b></h1>
+                            <span class="subheading" style="font-family: 'Segoe print', monospace; font-size: 20px;"><b>Destination Guru!!!</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!--    About US-->
+    <section id="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <p class="blink blink-one"> <img class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms" src="images/logo_abtus.png" alt="cooker-img"></p>
+                        <h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms" style="font-family: 'Segoe print', monospace;" ><b><span style="font-size: 64px;color:gray;">A</span></b><span style="font-size:34px;color:#77BDC9;">bout Us</span> <br><span style="color:black;font-size:20px;"> Destination Guru </span>
+                        </h1>
+                        <hr style="width:140px; height:1px;background-color:#C8C1B3">
+                        <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms" style="font-weight:400;">Commenced its journey in the year 2021, Destination Guru is successfully establishing itself for its finest coaching in <span style="color:#77BDC9;">IELTS, PTE, DUOLINGO and Spoken English</span>. Destination Guru grooms it’s students with personality development classes as well as prepare for <span style="color:#77BDC9;">VISA interviews</span>. We always follow the principles of being Loyal and Committed to excellence and the guidance from the professionals will help the students to reach their desired destinations around the world with a qualified mark according the course they choose</p>
+                    </div>
+                </div><!-- .col-md-12 close -->
+            </div><!-- .row close -->
+        </div><!-- .containe close -->
+    </section>
+
+<!-- courses Section -->
+    
+
+<section id="service" class="parallax-section">
+     <div class="container">
+         <hr style="height: 2px;width:60px;background-color:darkgrey;">
+         <p style="font-size: 30px;"><center style="font-size: 30px;color:#77BDC9;font-style:bold">COURSES</center></p>
+         <hr style="height: 2px;width:60px;background-color:darkgrey;">
+         
+          <div class="row">
+<a href="toefl.html">
+               <div class="bg-yellow col-md-3 col-sm-6">
+                    <div class="wow fadeInUp color-white service-thumb" data-wow-delay="0.8s">
+<!--                         <i class="fa fa-desktop"></i>-->
+                        <p class="blink blink-one"> <i class="fa fa-graduation-cap" style="color:white;"></i></p>
+                        <h3 style="font-family: 'Segoe print', monospace;"><b class="">TOEFL</b></h3>
+<!--                              <p class="color-white">TOEFLTOEFL TOEFL TOEFL TOEFL TOEFL TOEFL TOEFL TOEFL TOEFL TOEFL TOEFL TOEFL TOEFL</p>-->
+                    </div>
+               </div>
+              </a>
+              <a href="pte.html">
+               <div class="col-md-3 col-sm-6">
+                    <div class="wow fadeInUp color-white service-thumb" data-wow-delay="1.2s">
+                          <i class="	fa fa-graduation-cap" style="color: #77BDC9;"></i>
+<!--                        <i class="fas fa-book-open"  style="color: #CE9A89"></i>-->
+<!--                        <i style='font-size:24px' class='fas'>&#xf5da;</i>-->
+<!--                        <i class="fa-solid fa-book-open-cover" style="color: #CE9A89;"></i>-->
+                        <h3 style="color: #77BDC9;font-family: 'Segoe print', monospace;"><b class="blink blink-one">PTE</b></h3>
+<!--                              <p class="color-white" style="color: #77BDC9;">PET PET PET PET PET PET PET PET PET PET PET PET PET PET PET</p>-->
+                    </div>
+               </div>
+              </a>
+                 <a href="ielts.html">
+               <div class="bg-dark col-md-3 col-sm-6">
+                    <div class="wow fadeInUp color-white service-thumb" data-wow-delay="1.6s">
+                        <p class="blink blink-one"><i class="fa fa-graduation-cap" style="color:white;"></i></p>
+                              <h3 style="font-family: 'Segoe print', monospace;">IELTS</h3>
+<!--                              <p class="color-white">IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS</p>-->
+                    </div>
+               </div>
+              </a>
+              <a href="det.html">
+
+               <div class="bg-white col-md-3 col-sm-6">
+                    <div class="wow fadeInUp service-thumb" data-wow-delay="1.8s">
+                         <i class="fa fa-graduation-cap" style="color: #77BDC9;"></i>
+                        
+                        <h3 style="color: #77BDC9;font-family: 'Segoe print', monospace;"><b class="blink blink-one">Duolingo</b></h3>
+<!--                              <p style="color: #77BDC9;">Duolingo Duolingo Duolingo Duolingo Duolingo Duolingo Duolingo Duolingo Duolingo Duolingo</p>-->
+                    </div>
+               </div>
+              </a>
+
+          </div>
+     </div>
+<!--     <div class="">-->
+<!--        <ul>-->
+<!--            <li style="list-style-type:none;">-->
+     
+<!--            </li></ul>-->
+<!--    </div>-->
+</section>
+<div>
+<!--    <a class="btn-whats pulse" href="https://api.whatsapp.com/send?phone=918332998471&amp;text=&amp;source=&amp;data=&amp;app_absent=" target="_blank" style=""> <i class="fa fa-whatsapp" aria-hidden="true" style="color:#77BDC9;border-radius: 26px;height:33px;width:32px;font-size:35px;position:absolute;"></i></a>-->
+
+    </div>
+
+<!-- SCRIPTS -->
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+    <script src="js/isotope.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/wow.min.js"></script>
+<!--<script src="js/custom.js"></script>-->
+    <script src="js/customs.js"></script>
+<!--    <script src="js/isotope.js"></script>-->
+<!--    <script src="js/isotope.min.js"></script>-->
+    <script src="js/slick-slider.js"></script>
+ 
+</body>
+</html>
